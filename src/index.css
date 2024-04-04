@@ -1,0 +1,73 @@
+html{
+    scroll-behavior:smooth;
+}
+body{
+    margin:0;
+    padding: 0;
+}
+:root{ 
+    --main-color: rgb(2,59,109);
+    --second-color: rgb(25,119,204);
+    --orange-color: rgb(241,119,50);
+
+}
+
+section, footer, header{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    max-width: 100%;
+    padding:25px 0px;
+    margin-top:50px
+}
+a{
+    text-decoration: none !important;
+    
+}
+span{
+    display:block;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+button{
+    cursor:pointer;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius:10px;
+    
+    
+
+}
+
+border{
+    border: 1px solid black;
+    
+}
+
+p{
+    line-height:28px;
+}
+
+flex{
+    display: flex;
+    
+}
+
+
+input{
+     box-sizing: border-box;
+      border: 1px solid black;
+      padding: 5px 15px;
+      font-size:16px;
+      color:black;
+      border-radius:10px;
+}
+

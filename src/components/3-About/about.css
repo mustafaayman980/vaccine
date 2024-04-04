@@ -1,0 +1,60 @@
+.about {
+  display: flex;
+  margin:20px 80px;
+  justify-content: Space-around;
+  align-items: flex-start;
+  gap:3rem;
+
+}
+
+.about .image {
+  display: flex;
+}
+.about .image .image-t {
+}
+
+.about .image .image-t img {
+        border-radius: 0 60px 60px;
+}
+
+.about .text {
+}
+.about .text h3 {
+  color: var(--orange-color);
+  font-size: 30px;
+  font-weight: 700;
+}
+.about .text h2 {
+  display: block;
+  color: var(--main-color);
+  font-size: 60px;
+  font-weight: 700;
+}
+.about .text p {
+  color: rgb(80, 80, 80);
+  font-size: 16px;
+  line-height: 1.5rem;
+}
+
+.about .same {
+  display: flex;
+}
+
+.about .same .s-pare p {
+  border: 1px solid var(--orange-color);
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 20px 20px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: var(--main-color);
+}
+
+.about button {
+  background: var(--orange-color);
+  padding: 20px 45px;
+  color: white;
+  border: none;
+  font-size: 18px;
+}
