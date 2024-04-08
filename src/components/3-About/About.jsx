@@ -1,8 +1,8 @@
 import "./about.css";
 function About() {
   return (
-    <div>
-      <div className="about ">
+    <div id="about">
+      <div className="about">
         <div className="image">
           <div className="image-t">
             <img src="/src/assets/image/12.jpg" alt="3" />

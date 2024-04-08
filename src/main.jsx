@@ -1,16 +1,23 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import Header from './components/1-Header/Header.jsx'
-import Hero from './components/2-Hero/Hero.jsx'
-import About from './components/3-About/About.jsx'
+import ReactDOM from "react-dom";
+import App from "./App.jsx";
+import "./index.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/1-Header/Header.jsx";
+import Hero from "./components/2-Hero/Hero.jsx";
+import About from "./components/3-About/About.jsx";
+import Works from "./components/4-Works/Works.jsx";
+import Login from "./assets/pages/1-Login/Login.jsx";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Header/>
-    <Hero />
-    <About />
-    <App />
-  </React.StrictMode>,
-)
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+
+      <Route path="/header" element={<Header />} />
+      <Route path="/hero" element={<Hero />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/works" element={<Works />} />
+      <Route path="/login" element={<Login />} />
+    </Routes>
+  </BrowserRouter>
+);

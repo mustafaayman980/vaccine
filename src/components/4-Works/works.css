@@ -1,0 +1,86 @@
+.work {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.work .text {
+}
+
+.work .text h3 {
+  color: var(--orange-color);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.work .text h2 {
+  display: block;
+  color: var(--main-color);
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.work .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.work .cards .card {
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  transition: 0.3s;
+  text-align: start;
+  padding: 25px;
+}
+
+.work .cards .active {
+  margin-top: -15px;
+}
+
+.work .cards .card:hover {
+  background-color: rgb(254 168 119);
+}
+
+.work .cards .card .card-num span {
+  font-size: 100px;
+  font-weight: 700;
+  margin-top: 20px;
+  color: var(--orange-color);
+}
+
+.work .cards .card .card-text {
+  margin-top: -40px;
+
+  
+}
+
+.work .cards .card .card-text h3 {
+  color: var(--orange-color);
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.work .cards .card .card-text p {
+  color: var(--main-color);
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: -20px;
+}
+
+.work .cards .card button {
+  background: var(--orange-color);
+  padding: 20px 45px;
+  color: white;
+  border: none;
+  font-size: 18px;
+}

@@ -1,5 +1,8 @@
 .header{
     background-color:var(--main-color);
+    position:fixed;
+    width:100%;
+    top:0;
 }
 .header-container{
     display: flex;
