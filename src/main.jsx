@@ -7,6 +7,7 @@ import Hero from "./components/2-Hero/Hero.jsx";
 import About from "./components/3-About/About.jsx";
 import Works from "./components/4-Works/Works.jsx";
 import Login from "./assets/pages/1-Login/Login.jsx";
+import Profile from "./assets/pages/2-Profile/Profile.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -18,6 +19,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/about" element={<About />} />
       <Route path="/works" element={<Works />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/profile" element={<Profile />} />
+      
     </Routes>
   </BrowserRouter>
 );
