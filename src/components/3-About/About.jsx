@@ -15,10 +15,13 @@ function About() {
         </div>
         <div className="text">
           <h3>About Us</h3>
-          <h2>The Great Place Of Medical Hospital Center</h2>
+          <h2>
+            Vaccines are products that are usually given in childhood to protect
+            against serious, often deadly diseases.
+          </h2>
           <p>
-            We provide the special tips and advice’s of heath care treatment and
-            high level of best technology involve in the our hospital.
+            We provide advice and advice on vaccination and the high level of
+            the best technology involved in our hospital.
           </p>
           <div className="same">
             <div className="s-pare">

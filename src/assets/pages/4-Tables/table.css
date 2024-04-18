@@ -1,0 +1,97 @@
+.tables{
+}
+
+.tables .table{
+    background-color:#e8e8e8;
+    margin-top:70px;
+    margin-bottom:70px;
+
+   
+}
+
+
+.table .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.table .text h2 {
+  background-color: var(--second-color);
+  border-radius: 10px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--main-color);
+
+  padding: 0.5rem;
+}
+
+.table .text p {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: white;
+  margin-top: -10px;
+  background-color: var(--second-color);
+  text-align: center;
+  border-radius: 10px;
+  padding: 0.5rem 2rem;
+}
+
+.text img{
+    width: 20%;
+   text-align: center;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+table {
+  background: var(--second-color);
+  text-align: center;
+  border: 1px solid var(--second-color);
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 20%);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 100px;
+
+}
+
+table thead {
+  background: var(--main-color);
+  border: 3px solid var(--main-color);
+}
+
+table thead tr {
+  color: var(--main-color);
+}
+
+table thead th {
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 20px 20px;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: var(--orange-color);
+}
+
+table tbody {
+  background: var(--main-color);
+  border: 3px solid var(--main-color);
+}
+
+table tbody tr {
+}
+
+table tbody td {
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 20px 20px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: white;
+}

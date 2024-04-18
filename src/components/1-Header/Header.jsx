@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./header.css";
 
+
 function Header() {
   return (
     <div>
@@ -8,21 +9,21 @@ function Header() {
         <div className="header-container ">
           <Link to="/">
             <div className="logo">
-              <img src="/src/assets/image/logo.png" alt="logo" />
+              <img src="/src/assets/image/33.png" alt="logo" />
             </div>
           </Link>
           <div className="nav border">
             <ul>
               <li>
-                <a className="active" href="#home">
+                <Link to="/" className="active" href="#home">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#about">About</a>
               </li>
               <li>
-                <a href="#services">Services</a>
+                <Link to="/CardTime">Vaccination time</Link>
               </li>
               <li>
                 <Link to="/profile">Profile</Link>

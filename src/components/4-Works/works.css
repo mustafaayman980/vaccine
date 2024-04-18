@@ -12,7 +12,7 @@
 
 .work .text h3 {
   color: var(--orange-color);
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 700;
 }
 
@@ -40,7 +40,7 @@
   margin: 10px;
   transition: 0.3s;
   text-align: start;
-  padding: 25px;
+  padding: 35px ;
 }
 
 .work .cards .active {

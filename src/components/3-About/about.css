@@ -21,18 +21,18 @@
 }
 .about .text h3 {
   color: var(--orange-color);
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 700;
 }
 .about .text h2 {
   display: block;
   color: var(--main-color);
-  font-size: 60px;
+  font-size: 45px;
   font-weight: 700;
 }
 .about .text p {
   color: rgb(80, 80, 80);
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.5rem;
 }
 

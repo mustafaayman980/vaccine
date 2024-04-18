@@ -1,9 +1,8 @@
-.profile{
+.profile {
   position: absolute;
   height: 199px;
-  width: 97%;
+  width: 100%;
   background: var(--main-color);
-  
 }
 .profile::before,
 .profile::after {
@@ -29,36 +28,27 @@
 }
 
 .cards {
-  position:relative;
+  position: relative;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  z-index:10;
+  z-index: 10;
+  margin-top: 9rem;
 }
 
-.cards .info{
+.cards .info {
   margin-top: -100px;
-}
-
-.profile h2 {
-  color:white;
-  font-size: 45px;
-  letter-spacing: 0.5px;
-  font-weight: 700;
-  margin: 40px;
 }
 
 .profile .card-1 {
   display: flex;
   flex-direction: row;
   gap: 4rem;
-
   margin: 4rem;
-
 }
 
 .profile .card-1 h4 {
- color:white;
+  color: white;
   font-size: 25px;
   text-transform: capitalize;
   letter-spacing: 0.5px;
@@ -66,8 +56,6 @@
 }
 
 .profile .card-1 img {
-   
-
 }
 
 .profile .card-1 form {
@@ -101,8 +89,8 @@
   text-transform: capitalize;
   letter-spacing: 0.5px;
   font-weight: 700;
+  /* margin-bottom: 10rem; */
 }
-
 
 .profile .card-1 .labels label {
   display: flex;
@@ -119,9 +107,17 @@
   color: white;
   border: none;
   font-size: 18px;
-      left: 50%;
-    transform: translate(50%, 50%);
-    margin-top: 30px;
-
+  position: relative;
+  left: 20%;
+  top: -5rem;
 }
 
+.card-2 img {
+  margin-top: -50px;
+  width: 250px;
+  filter: drop-shadow(4px 4px 6px var(--main-color));
+}
+
+.card-2 img:hover {
+  transform: scale(1.1);
+}
