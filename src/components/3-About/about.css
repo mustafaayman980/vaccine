@@ -50,6 +50,10 @@
   line-height: 1.5rem;
   color: var(--main-color);
 }
+.about .same .s-pare p:hover{
+      background-color: rgb(2 59 109 / 87%);
+      color: white;
+}
 
 .about button {
   background: var(--orange-color);
