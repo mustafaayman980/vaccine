@@ -13,7 +13,7 @@ import "./hero.css"
           </Link>
         </div>
         <div className="hero-image">
-          <img src="/src/assets/image/15.png" alt="vac" />
+          <img src="../src/assets/image/15.png" alt="vac" />
         </div>
       </div>
     </div>
