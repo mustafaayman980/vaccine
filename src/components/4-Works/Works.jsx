@@ -18,8 +18,7 @@ function Works() {
             <p>See the vaccines your child needs by age</p>
           </div>
           <Link to="/Table">
-
-          <button type="button">View More</button>
+            <button type="button">View More</button>
           </Link>
         </div>
         <div className="card active">
@@ -30,7 +29,9 @@ function Works() {
             <h3>Safety & Side effects</h3>
             <p>Learn about vaccine safety and side effects</p>
           </div>
-          <button type="button">View More</button>
+          <Link to="/Safety">
+            <button type="button">View More</button>
+          </Link>
         </div>
         <div className="card">
           <div className="card-num">
@@ -41,7 +42,9 @@ function Works() {
             <p>Understand why vaccines are important</p>
           </div>
 
-          <button type="button">View More</button>
+          <Link to="/Benefits">
+            <button type="button">View More</button>
+          </Link>
         </div>
       </div>
     </div>

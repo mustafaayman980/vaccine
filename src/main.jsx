@@ -10,6 +10,11 @@ import Login from "./assets/pages/1-Login/Login.jsx";
 import Profile from "./assets/pages/2-Profile/Profile.jsx";
 import CardTime from "./assets/pages/3-Card-time/CardTime.jsx";
 import Table from "./assets/pages/4-Tables/Table.jsx";
+import Safety from "./assets/pages/5-Safety/Safety.jsx";
+import Benefits from "./assets/pages/6-Benefits/Benefits.jsx";
+import Footer from "./components/5-Footer/Footer.jsx";
+import Intro from "./assets/pages/7-Intro/Intro.jsx";
+import Hospt from "./assets/pages/8-Hospt/Hospt.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -24,6 +29,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/profile" element={<Profile />} />
       <Route path="/CardTime" element={<CardTime />} />
       <Route path="/Table" element={<Table />} />
+      <Route path="/Safety" element={<Safety />} />
+      <Route path="/Benefits" element={<Benefits />} />
+      <Route path="/Intro" element={<Intro />} />
+      <Route path="/Hospt" element={<Hospt />} />
+
+      <Route path="/Footer" element={<Footer />} />
     </Routes>
   </BrowserRouter>
 );

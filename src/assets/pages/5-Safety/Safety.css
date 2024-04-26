@@ -1,0 +1,45 @@
+.safety {
+  margin: 6rem;
+}
+
+.safety .text .title h2 {
+  text-align: center;
+  color: var(--main-color);
+  font-size: 45px;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  
+}
+.safety .text .sup h3 {
+
+  display: block;
+  color: var(--orange-color);
+  font-size: 25px;
+  font-weight: 700;
+}
+.safety .text .sup p {
+  color: rgb(80, 80, 80);
+  font-size: 20px;
+  line-height: 1.5rem;
+}
+.safety .text .supp p ul {
+     
+}
+.safety .text .sup p ul li {
+    list-style: inside;
+}
+.bp button {
+  background: var(--orange-color);
+  padding: 20px 45px;
+  color: white;
+  border: none;
+  font-size: 18px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 30%);
+}
+
+/* .safety .end{
+
+} */

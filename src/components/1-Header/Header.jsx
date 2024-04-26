@@ -20,7 +20,9 @@ function Header() {
                 </Link>
               </li>
               <li>
-                <a href="#about">About</a>
+                <Link to="/Table" href="#Vaccination schedule">
+                  Vaccination schedule
+                </Link>
               </li>
               <li>
                 <Link to="/CardTime">Vaccination time</Link>

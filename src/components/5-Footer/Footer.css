@@ -1,0 +1,34 @@
+.footer {
+  background-color: var(--main-color);
+  width: 100%;
+  /* padding: 15px; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--main-color);
+  width: 100%;
+ 
+}
+.footer .text h2{
+    color: var(--orange-color);
+    font-size: 25px;
+    text-transform: capitalize;
+
+}
+
+.footer .links ul {
+  display: flex;
+  gap:1rem;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer .links ul li a{
+    font-size: 20px;
+    color: var(--orange-color);
+
+}
+.footer .links ul li a:hover{
+    
+    color: var(--second-color);
+
+}

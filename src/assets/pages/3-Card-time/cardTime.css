@@ -1,22 +1,19 @@
-.totalCard{
-  margin-top: 12rem;
-  /* padding: 10rem; */
+.totalCard {
+  margin-top: 25rem;
 }
-.card-time {
+.totalCard .card-time {
   width: 500px;
-  height: 150px;
-  /* background: var(--main-color); */
   box-shadow: 0 1px 25px rgba(0, 0, 0, 0.2);
-  padding: 12px 10px;
+  padding: 20px 20px;
   display: flex;
-  gap: 2.5rem;
-  margin-bottom: 25px;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
   border-radius: 15px;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* margin-top: 10rem; */
 }
 .card-time img {
   width: 120px;
@@ -31,7 +28,6 @@
   font-weight: 700;
   width: 100%;
   color: var(--second-color);
-
   border-radius: 15px;
   background: linear-gradient(
     120deg,
@@ -48,23 +44,14 @@
 }
 
 .card-time .text .text-pra {
-  width: 100%;
-  border-radius: 15px;
-  background: linear-gradient(
-    120deg,
-    #e5e5e5 30%,
-    #f0f0f0 38%,
-    #f0f0f0 40%,
-    #e5e5e5 48%
-  );
-  background-size: 200% 100%;
-  background-position: 100% 0;
-  animation: load89234 2s infinite;
-  padding: 10px 5px;
-  margin-top: -15px;
-  display: flex;
-  gap: 2rem;
-  color: var(--second-color);
+ width: 100%;
+    border-radius: 15px;
+    margin-top: -15px;
+    display: flex;
+    gap: 2rem;
+    color: var(--second-color);
+    justify-content: center;
+    font-size: 25px;
 }
 
 .card-time .text .text-pra .st {
@@ -87,3 +74,29 @@
     background-position: -100% 0;
   }
 }
+
+.card-time p{
+  color:var(--orange-color );
+  font-size: 25px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  width: 100%;
+  border-radius: 15px;
+  background: linear-gradient(
+    120deg,
+    #e5e5e5 30%,
+    #f0f0f0 38%,
+    #f0f0f0 40%,
+    #e5e5e5 48%
+    );
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: load89234 2s infinite;
+    padding: 5px;
+    margin:-5px;
+    text-align: center;
+  }
+  
+  .card-time p span{
+    color: var(--second-color);
+  }

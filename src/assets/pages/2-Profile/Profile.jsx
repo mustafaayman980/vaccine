@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./profile.css";
 import CardTime from "../3-Card-time/CardTime";
 import Header from "../../../components/1-Header/Header";
@@ -35,24 +35,21 @@ function Profile() {
                   30203021202788
                 </label>
               </form>
-              
             </div>
-      <CardTime />
           </div>
         </div>
-        <div className="card-2">
+        {/* <div className="card-2">
           <div>
             <img src="/src/assets/image/155.png" alt="profile" />
           </div>
-        </div>
+        </div> */}
+        <CardTime />
       </div>
-     
-      <div className="bp">
+      {/* <div className="bp">
         <Link to="/">
           <button type="button">back</button>
         </Link>
-      </div>
-      
+      </div> */}
     </div>
   );
 }

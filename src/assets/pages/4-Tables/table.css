@@ -1,97 +1,87 @@
-.tables{
+.tables {
+  /* background-color: #e8e8e8; */
+  margin-top: 70px;
 }
-
-.tables .table{
-    background-color:#e8e8e8;
-    margin-top:70px;
-    margin-bottom:70px;
-
-   
-}
-
-
-.table .text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.table .text h2 {
-  background-color: var(--second-color);
-  border-radius: 10px;
-  font-size: 2.5rem;
-  font-weight: bold;
+.tables .title {
+  text-align: center;
   color: var(--main-color);
-
+  font-size: 45px;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  font-weight: 700;
   padding: 0.5rem;
 }
 
-.table .text p {
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 1.5rem;
-  color: white;
-  margin-top: -10px;
-  background-color: var(--second-color);
-  text-align: center;
-  border-radius: 10px;
-  padding: 0.5rem 2rem;
+.table .text {
+  display: flex;
+  justify-content: ;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
-.text img{
-    width: 20%;
-   text-align: center;
-    border-radius: 10px;
-    margin-top: 10px;
+.table .text p {
+  font-size: 50px;
+  font-weight: 400;
+  color: var(--second-color);
+}
+
+.text img {
+  width: 20%;
 }
 table {
   background: var(--second-color);
   text-align: center;
-  border: 1px solid var(--second-color);
   position: relative;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, 20%);
-  padding: 1rem;
+  transform: translate(-50%);
+  padding: 10px;
   border-radius: 10px;
-  margin-bottom: 100px;
-
+  margin: 50px 0px;
 }
 
 table thead {
   background: var(--main-color);
-  border: 3px solid var(--main-color);
-}
-
-table thead tr {
-  color: var(--main-color);
+  /* border: 3px solid var(--main-color); */
 }
 
 table thead th {
-  padding: 10px 20px;
+  padding: 20px 40px;
   border-radius: 10px;
   margin: 20px 20px;
   font-size: 30px;
-  font-weight: 400;
   line-height: 1.5rem;
   color: var(--orange-color);
 }
 
 table tbody {
   background: var(--main-color);
-  border: 3px solid var(--main-color);
-}
-
-table tbody tr {
+  /* border: 3px solid var(--main-color); */
 }
 
 table tbody td {
-  padding: 10px 20px;
-  border-radius: 10px;
-  margin: 20px 20px;
+  padding: 20px 40px;
   font-size: 20px;
   font-weight: 400;
   line-height: 1.5rem;
   color: white;
+  border-radius: 10px;
+}
+table span {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--orange-color);
+}
+
+.bp button {
+  background: var(--orange-color);
+  padding: 20px 45px;
+  color: white;
+  border: none;
+  font-size: 18px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 30%);
 }
