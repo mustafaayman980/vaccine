@@ -1,6 +1,9 @@
 import "./table.css";
 import Header from "../../../components/1-Header/Header";
 import { Link } from "react-router-dom";
+import imageF from "/src/assets/image/5-removebg-preview.png"
+import imageS from "/src/assets/image/10-removebg-preview.png";
+
 function Table() {
   return (
     <div>
@@ -12,7 +15,7 @@ function Table() {
           </div>
           <div className="text">
             <p>At birth</p>
-            <img src="/src/assets/image/5-removebg-preview.png" />
+            <img src={imageF} alt="imageF" />
           </div>
           <table>
             <thead>
@@ -56,7 +59,7 @@ function Table() {
         <div className="table">
           <div className="text">
             <p>The second month of life(2)</p>
-            <img src="/src/assets/image/10-removebg-preview.png" />
+            <img src={imageS} alt="imageS" />
           </div>
           <table>
             <thead>
@@ -96,7 +99,7 @@ function Table() {
         <div className="table">
           <div className="text">
             <p>The second month of life(3)</p>
-            <img src="/src/assets/image/10-removebg-preview.png" />
+            <img src={imageS} alt="imageS" />
           </div>
           <table>
             <thead>
@@ -136,7 +139,7 @@ function Table() {
         <div className="table">
           <div className="text">
             <p>The second month of life(4)</p>
-            <img src="/src/assets/image/10-removebg-preview.png" />
+            <img src={imageS} alt="imageS" />
           </div>
           <table>
             <thead>
@@ -176,7 +179,7 @@ function Table() {
         <div className="table">
           <div className="text">
             <p>The second month of life(5)</p>
-            <img src="/src/assets/image/10-removebg-preview.png" />
+            <img src={imageS} alt="imageS" />
           </div>
           <table>
             <thead>
@@ -207,7 +210,7 @@ function Table() {
         <div className="table">
           <div className="text">
             <p>The second month of life(6)</p>
-            <img src="/src/assets/image/10-removebg-preview.png" />
+            <img src={imageS} alt="imageS" />
           </div>
           <table>
             <thead>
@@ -241,7 +244,7 @@ function Table() {
         <div className="table">
           <div className="text">
             <p>The second month of life(7)</p>
-            <img src="/src/assets/image/10-removebg-preview.png" />
+            <img src={imageS} alt="imageS" />
           </div>
           <table>
             <thead>

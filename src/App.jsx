@@ -30,15 +30,7 @@ function App() {
       <a style={{ opacity: scroll ? 1 : 0, transition: "1s" }} href="#up">
         <button className="scroll2up ">up</button>
       </a>
-      <div
-        className="card-log"
-        style={{ opacity: scroll ? 1 : 0, transition: "1s" }}
-      >
-        <Link to="/Login">
-          <h2>please Login </h2>
-          <button type="button">Login</button>
-        </Link>
-      </div>
+      
     </div>
   );
 }

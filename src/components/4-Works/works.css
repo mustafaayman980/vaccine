@@ -40,7 +40,7 @@
   margin: 10px;
   transition: 0.3s;
   text-align: start;
-  padding: 35px ;
+  padding: 35px;
 }
 
 .work .cards .active {
@@ -48,7 +48,8 @@
 }
 
 .work .cards .card:hover {
-      background-color: rgb(2 59 109 / 87%);
+  background-color: rgb(2 59 109 / 87%);
+  
 }
 
 .work .cards .card .card-num span {
@@ -60,8 +61,6 @@
 
 .work .cards .card .card-text {
   margin-top: -40px;
-
-  
 }
 
 .work .cards .card .card-text h3 {
@@ -76,6 +75,7 @@
   font-weight: 400;
   margin-top: -20px;
 }
+
 
 .work .cards .card button {
   background: var(--orange-color);

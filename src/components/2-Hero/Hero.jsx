@@ -1,4 +1,4 @@
-
+import hero from "/src/assets/image/15.png";
 import { Link } from "react-router-dom";
 import "./hero.css"
  function Hero() {
@@ -13,7 +13,8 @@ import "./hero.css"
           </Link>
         </div>
         <div className="hero-image">
-          <img src="../src/assets/image/15.png" alt="vac" />
+          
+          <img src={hero} alt="vac" />
         </div>
       </div>
     </div>

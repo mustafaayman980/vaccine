@@ -1,4 +1,8 @@
 import { Link } from "react-router-dom";
+import aboutF from "/src/assets/image/12.jpg" 
+import aboutS from "/src/assets/image/14.jpg"; 
+import aboutT from "/src/assets/image/13.jpg"; 
+
 import "./about.css";
 function About() {
   return (
@@ -6,12 +10,12 @@ function About() {
       <div className="about">
         <div className="image">
           <div className="image-t">
-            <img src="/src/assets/image/12.jpg" alt="3" />
-            <img src="/src/assets/image/13.jpg" alt="4" />
+            <img src={aboutF} alt="3" />
+            <img src={aboutT} alt="4" />
           </div>
           <div className="image-t">
-            <img src="/src/assets/image/14.jpg" alt="3" />
-            <img src="/src/assets/image/12.jpg" alt="4" />
+            <img src={aboutS} alt="4" />
+            <img src={aboutF} alt="3" />
           </div>
         </div>
         <div className="text">
@@ -35,8 +39,7 @@ function About() {
             </div>
           </div>
           <Link to="/Hospt">
-          <button type="button">Read more</button>
-
+            <button type="button">Read more</button>
           </Link>
         </div>
       </div>

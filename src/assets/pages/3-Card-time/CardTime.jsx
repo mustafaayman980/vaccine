@@ -1,5 +1,7 @@
 import Header from "../../../components/1-Header/Header";
 import "./cardTime.css";
+import imageProfile from "/src/assets/image/profile1.png";
+
 import { useEffect, useState } from "react";
 function CardTime() {
   const CalculateTimeDifference = ({ time2 }) => {
@@ -28,7 +30,7 @@ function CardTime() {
     return (
       <div className="totalCard">
         <div className="card-time">
-          <img src="/src/assets/image/profile1.png" />
+          <img src={imageProfile} alt="profile"/>
 
           <span className="text">
             <h3>Previous Vaccination-</h3>

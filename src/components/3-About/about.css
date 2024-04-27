@@ -1,20 +1,21 @@
 .about {
   display: flex;
-  margin:20px 80px;
+  margin: 20px 80px;
   justify-content: Space-around;
   align-items: flex-start;
-  gap:3rem;
-
+  gap: 3rem;
 }
 
 .about .image {
   display: flex;
+  gap: 2rem;
 }
 .about .image .image-t {
 }
 
 .about .image .image-t img {
-        border-radius: 0 60px 60px;
+  border-radius: 0 60px 60px;
+  padding:5px;
 }
 
 .about .text {
@@ -50,9 +51,9 @@
   line-height: 1.5rem;
   color: var(--main-color);
 }
-.about .same .s-pare p:hover{
-      background-color: rgb(2 59 109 / 87%);
-      color: white;
+.about .same .s-pare p:hover {
+  background-color: rgb(2 59 109 / 87%);
+  color: white;
 }
 
 .about button {
