@@ -15,26 +15,31 @@ import Benefits from "./assets/pages/6-Benefits/Benefits.jsx";
 import Footer from "./components/5-Footer/Footer.jsx";
 import Intro from "./assets/pages/7-Intro/Intro.jsx";
 import Hospt from "./assets/pages/8-Hospt/Hospt.jsx";
+import AuthContext from "./context/AuthContext.jsx";
+import ViewOne from "./assets/pages/9-view/ViewOne.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />} />
+  <AuthContext>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
 
-      <Route path="/header" element={<Header />} />
-      <Route path="/hero" element={<Hero />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/works" element={<Works />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/profile" element={<Profile />} />
-      <Route path="/CardTime" element={<CardTime />} />
-      <Route path="/Table" element={<Table />} />
-      <Route path="/Safety" element={<Safety />} />
-      <Route path="/Benefits" element={<Benefits />} />
-      <Route path="/Intro" element={<Intro />} />
-      <Route path="/Hospt" element={<Hospt />} />
+        <Route path="/header" element={<Header />} />
+        <Route path="/hero" element={<Hero />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/works" element={<Works />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/CardTime" element={<CardTime />} />
+        <Route path="/Table" element={<Table />} />
+        <Route path="/Safety" element={<Safety />} />
+        <Route path="/Benefits" element={<Benefits />} />
+        <Route path="/Intro" element={<Intro />} />
+        <Route path="/Hospt" element={<Hospt />} />
+        <Route path="/ViewOne" element={<ViewOne />} />
 
-      <Route path="/Footer" element={<Footer />} />
-    </Routes>
-  </BrowserRouter>
+        <Route path="/Footer" element={<Footer />} />
+      </Routes>
+    </BrowserRouter>
+  </AuthContext>
 );

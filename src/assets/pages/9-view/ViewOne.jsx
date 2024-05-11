@@ -1,19 +1,13 @@
-// import { Link } from "react-router-dom";
-import "./profile.css";
-
 import Header from "../../../components/1-Header/Header";
 import imageProfile from "/src/assets/image/profile1.png";
-import { useAuthContext } from "../../../context/AuthContext";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-
-function Profile() {
-  const { profile } = useAuthContext();
+import { useAuthContext } from "../../../context/AuthContext";
+import "./view.css";
+function ViewOne() {
   const { token } = useAuthContext();
   console.log(token);
   const [data, setData] = useState([]);
 
-  console.log(profile);
   useEffect(() => {
     const getChildren = async () => {
       try {
@@ -36,34 +30,8 @@ function Profile() {
   return (
     <div>
       <Header />
-      <div className="profile">
-        <div className="cards">
-          <div className="card-1">
-            <div className="info">
-              <h4>parent</h4>
-              <img src={imageProfile} alt="profile" />
-            </div>
-            <div>
-              <div className="labels">
-                <form action="" method="post">
-                  <label>
-                    <span>Name:</span>
-                    {profile?.name}
-                  </label>
-                  <label>
-                    <span>National Id: </span>
-                    {profile?.national_id}
-                  </label>
-                  <label>
-                    <span>phone_number:</span> {profile?.phone_number}
-                  </label>
-                  <label>
-                    <span>address:</span> {profile?.national_id}
-                  </label>
-                </form>
-              </div>
-            </div>
-          </div>
+      <div className="kids">
+        <div className="profile">
           <div className="kids-info">
             <div className="info">
               <h4>for kids</h4>
@@ -75,21 +43,40 @@ function Profile() {
                   data.map((children) => (
                     <>
                       <form action="" method="post">
-                        <label>
+                        <div>
                           <span>Name:</span>
                           {children?.name}
-                        </label>
-                        <label>
+                        </div>
+                        <div>
                           <span>gender: </span>
                           {children?.gender}
-                        </label>
-                        <label>
-                          <span>dateOfbirth:</span> {children?.dateOfbirth}
-                        </label>
+                        </div>
 
-                        <Link to="/ViewOne">
-                          <button type="button">View</button>
-                        </Link>
+                        <div>
+                          <span>dateOfbirth:</span> {children?.dateOfbirth}
+                        </div>
+
+                        <div>
+                          <span>weight:</span> {children?.weight}
+                        </div>
+
+                        <div>
+                          <span>length:</span> {children?.length}
+                        </div>
+                        <h3>Vaccination appointments</h3>
+                        {children.doses.map((dose) => (
+                          <>
+                            <div className="card-vac">
+                              <p className="vac">
+                                <span>doses:</span> {dose.vaccine_name}
+                              </p>
+                              <p>
+                                <span>doses_date:</span>
+                                {dose.doses_date}
+                              </p>
+                            </div>
+                          </>
+                        ))}
                       </form>
                     </>
                   ))}
@@ -101,4 +88,4 @@ function Profile() {
     </div>
   );
 }
-export default Profile;
+export default ViewOne;

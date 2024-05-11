@@ -7,13 +7,17 @@ import "./hero.css"
       <div className="hero ">
         <div className="hero-text">
           <h5>We Provide All Health Care Solution</h5>
-          <h2>Vaccinate your child. Protect them from 14 diseases.</h2>
+          <h2>
+            Vaccinate your child. Protect them from 10 
+            
+              <Link to="/Table"> diseases.</Link>
+           
+          </h2>
           <Link to="/Intro">
             <button type="button">Read more</button>
           </Link>
         </div>
         <div className="hero-image">
-          
           <img src={hero} alt="vac" />
         </div>
       </div>

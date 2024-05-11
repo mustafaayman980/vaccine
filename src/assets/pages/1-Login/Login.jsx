@@ -1,8 +1,51 @@
-import { Link } from "react-router-dom";
+import { json, Link, useNavigate } from "react-router-dom";
 import Header from "../../../components/1-Header/Header";
 import "./login.css";
+import { useState } from "react";
+import { useAuthContext } from "../../../context/AuthContext";
+// import fetch from 'node-fetch'
 
-function Login() {
+ function Login() {
+ const navigate = useNavigate()
+ const { onProfile, setToken } = useAuthContext();
+  async function handleLogin(national_id,password) {
+    try {
+      const response = await fetch("http://localhost:8000/api/tokens/create", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({national_id,password}),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to login");
+      }
+
+      const responseData = await response.json();
+      sessionStorage.setItem("token", responseData.token);
+            sessionStorage.setItem("parent",JSON.stringify(responseData.parent) );
+            setToken(responseData.token)
+onProfile(responseData.parent);
+      // Redirect to the appropriate page after successful login
+navigate("/profile");
+      console.log(responseData);
+    } catch (error) {
+      console.error("Login failed:", error);
+      // Handle login failure, e.g., show error message to the user
+    }
+  }
+const handleSubmit = (e) => {
+e.preventDefault();
+const national_id =e.target.national_id.value
+const password = e.target.password.value
+if (!national_id && !password) return null
+handleLogin(national_id,password);
+console.log(national_id,password)
+
+}
+
   return (
     <div>
       <Header />
@@ -12,14 +55,15 @@ function Login() {
         <div className="wave">
           <div className="container">
             <div className="heading">Sign In</div>
-            <form className="form" action="">
+
+            <form className="form" onSubmit={handleSubmit}>
               <input
-                placeholder="E-mail"
-                id="email"
-                name="email"
-                type="email"
+                placeholder="national_id"
+                id="national_id"
+                name="national_id"
+                // type="email"
                 className="input"
-                required=""
+                required={true}
               />
               <input
                 placeholder="Password"
@@ -27,14 +71,14 @@ function Login() {
                 name="password"
                 type="password"
                 className="input"
-                required=""
+                required={true}
               />
               <span className="forgot-password">
                 <a href="#">Forgot Password ?</a>
               </span>
               <input value="Sign In" type="submit" className="login-button" />
             </form>
-            <div className="social-account-container">
+            {/* <div className="social-account-container">
               <span className="title">Or Sign in with</span>
               <div className="social-accounts">
                 <button className="social-button google">
@@ -68,7 +112,7 @@ function Login() {
                   </svg>
                 </button>
               </div>
-            </div>
+            </div> */}
             <span className="agreement">
               <a href="#">Learn user licence agreement</a>
             </span>

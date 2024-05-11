@@ -14,8 +14,8 @@ function Works() {
             <span>01</span>
           </div>
           <div className="card-text">
-            <h3>Vaccine Schedule</h3>
-            <p>See the vaccines your child needs by age</p>
+            <h3>Diseases</h3>
+            <p>Diseases A Child Can Contract Without Vaccination</p>
           </div>
           <Link to="/Table">
             <button type="button">View More</button>

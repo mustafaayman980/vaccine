@@ -5,19 +5,64 @@ import imageF from "/src/assets/image/5-removebg-preview.png"
 import imageS from "/src/assets/image/10-removebg-preview.png";
 
 function Table() {
+  const items = [
+    { title: "Polio", sub: "Causes permanent paralysis or death." },
+    {
+      title: "Measles",
+      sub: " Leads to rash, cough, fever, and sometimes serious complications  ",
+    },
+    {
+      title: "Tetanus",
+      sub: "Causes painful muscle stiffness, lockjaw, and can be fatal.",
+    },
+    {
+      title: "Whooping Cough",
+      sub: "Brings on severe coughing fits, trouble breathing, and pneumonia",
+    },
+    {
+      title: "Bacterial Pneumonia",
+      sub: "Makes breathing difficult, causes chest pain, and fever.",
+    },
+    {
+      title: "Bacterial Meningitis",
+      sub: " Leads to fever, headache, stiff neck, and can cause brain damage or death.",
+    },
+    {
+      title: "Hepatitis B ",
+      sub: " Damages the liver and can lead to liver cancer.",
+    },
+    {
+      title: "RSV (Respiratory Syncytial Virus) ",
+      sub: " Causes respiratory infections and can lead to pneumonia.",
+    },
+    {
+      title: "Hib (Haemophilus influenzae type b) ",
+      sub: " Leads to infections in the ear, sinuses, lungs, and bloodstream.",
+    },
+    {
+      title: "Rotavirus ",
+      sub: "Causes diarrhea and vomiting, and can lead to dehydration.",
+    },
+  ];
   return (
     <div>
       <Header />
       <div className="tables">
         <div className="table">
           <div className="title">
-            <h2>Children's vaccination schedule (1)</h2>
+            <h2>Diseases a Child Can Contract Without Vaccination</h2>
           </div>
-          <div className="text">
-            <p>At birth</p>
-            <img src={imageF} alt="imageF" />
-          </div>
-          <table>
+          {items.map((item,index) => (
+            <div className="text" key={item.id}>
+              <div className="para">
+                <h3>{index}-{item.title}:</h3>
+                <p>{item.sub}</p>
+              </div>
+              <img src={imageF} alt="imageF" />
+            </div>
+          ))}
+
+          {/* <table>
             <thead>
               <tr>
                 <th>Age</th>
@@ -54,11 +99,11 @@ function Table() {
                 <td>Male</td>
               </tr>
             </tbody>
-          </table>
+          </table> */}
         </div>
-        <div className="table">
+        {/* <div className="table">
           <div className="text">
-            <p>The second month of life(2)</p>
+            <p>Measles:</p>
             <img src={imageS} alt="imageS" />
           </div>
           <table>
@@ -98,7 +143,7 @@ function Table() {
         </div>
         <div className="table">
           <div className="text">
-            <p>The second month of life(3)</p>
+            <p>Tetanus:</p>
             <img src={imageS} alt="imageS" />
           </div>
           <table>
@@ -138,7 +183,7 @@ function Table() {
         </div>
         <div className="table">
           <div className="text">
-            <p>The second month of life(4)</p>
+            <p>Whooping Cough:</p>
             <img src={imageS} alt="imageS" />
           </div>
           <table>
@@ -178,7 +223,7 @@ function Table() {
         </div>
         <div className="table">
           <div className="text">
-            <p>The second month of life(5)</p>
+            <p>Bacterial Pneumonia:</p>
             <img src={imageS} alt="imageS" />
           </div>
           <table>
@@ -209,7 +254,7 @@ function Table() {
         </div>
         <div className="table">
           <div className="text">
-            <p>The second month of life(6)</p>
+            <p>Bacterial Meningitis:(6)</p>
             <img src={imageS} alt="imageS" />
           </div>
           <table>
@@ -243,7 +288,7 @@ function Table() {
         </div>
         <div className="table">
           <div className="text">
-            <p>The second month of life(7)</p>
+            <p>Hepatitis B:(7)</p>
             <img src={imageS} alt="imageS" />
           </div>
           <table>
@@ -280,7 +325,7 @@ function Table() {
               </tr>
             </tbody>
           </table>
-        </div>
+        </div> */}
         <div className="bp">
           <Link to="/">
             <button type="button">back</button>

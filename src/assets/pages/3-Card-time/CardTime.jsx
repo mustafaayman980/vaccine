@@ -1,18 +1,42 @@
 import Header from "../../../components/1-Header/Header";
+import { useAuthContext } from "../../../context/AuthContext";
 import "./cardTime.css";
 import imageProfile from "/src/assets/image/profile1.png";
 
 import { useEffect, useState } from "react";
 function CardTime() {
+  const { token } = useAuthContext();
+  console.log(token);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const getChildren = async () => {
+      try {
+        fetch("http://localhost:8000/api/childrens", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        })
+          .then((res) => res.json())
+          .then((res) => setData(res));
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getChildren();
+  }, [token]);
+
   const CalculateTimeDifference = ({ time2 }) => {
     const [time1, setTime1] = useState(new Date());
 
     useEffect(() => {
       const intervalId = setInterval(() => {
         setTime1(new Date());
-      }, 1000); 
+      }, 1000);
 
-      return () => clearInterval(intervalId); 
+      return () => clearInterval(intervalId);
     }, []);
 
     // Calculate the time difference between time1 and time2
@@ -30,7 +54,7 @@ function CardTime() {
     return (
       <div className="totalCard">
         <div className="card-time">
-          <img src={imageProfile} alt="profile"/>
+          <img src={imageProfile} alt="profile" />
 
           <span className="text">
             <h3>Previous Vaccination-</h3>
@@ -43,10 +67,15 @@ function CardTime() {
             {/* {minutes} minutes {seconds} seconds
           {seconds} seconds */}
           </p>
-          <span className="text">
-            <h3>Previous Vaccination-</h3>
-            <div className="text-pra">{time2.toLocaleString()}</div>
-          </span>
+
+          <>
+            {" "}
+            <span className="text">
+              <h3>next Vaccination-</h3>
+
+              <div className="text-pra">{time2.toLocaleString()}</div>
+            </span>
+          </>
         </div>
       </div>
     );
@@ -61,9 +90,7 @@ function CardTime() {
           time2={new Date("2024-04-30T12:00:00")}
         />
       </div>
-      
-      </div>
-    
+    </div>
   );
 }
 
