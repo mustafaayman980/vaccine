@@ -1,47 +1,64 @@
 import "./table.css";
 import Header from "../../../components/1-Header/Header";
 import { Link } from "react-router-dom";
-import imageF from "/src/assets/image/5-removebg-preview.png"
-import imageS from "/src/assets/image/10-removebg-preview.png";
+import image0 from "/src/assets/image/00000.png";
+import image1 from "/src/assets/image/1111.png";
+import image2 from "/src/assets/image/2222.png";
+
+
+
 
 function Table() {
   const items = [
-    { title: "Polio", sub: "Causes permanent paralysis or death." },
+    {
+      title: "Polio",
+      sub: "Causes permanent paralysis or death.",
+      img: image0,
+    },
     {
       title: "Measles",
       sub: " Leads to rash, cough, fever, and sometimes serious complications  ",
+      img: image1,
     },
     {
       title: "Tetanus",
       sub: "Causes painful muscle stiffness, lockjaw, and can be fatal.",
+      img: image2,
     },
     {
       title: "Whooping Cough",
       sub: "Brings on severe coughing fits, trouble breathing, and pneumonia",
+      img: image1,
     },
     {
       title: "Bacterial Pneumonia",
       sub: "Makes breathing difficult, causes chest pain, and fever.",
+      img: image1,
     },
     {
       title: "Bacterial Meningitis",
       sub: " Leads to fever, headache, stiff neck, and can cause brain damage or death.",
+      img: image1,
     },
     {
       title: "Hepatitis B ",
       sub: " Damages the liver and can lead to liver cancer.",
+      img: image1,
     },
     {
       title: "RSV (Respiratory Syncytial Virus) ",
       sub: " Causes respiratory infections and can lead to pneumonia.",
+      img: image1,
     },
     {
       title: "Hib (Haemophilus influenzae type b) ",
       sub: " Leads to infections in the ear, sinuses, lungs, and bloodstream.",
+      img: image1,
     },
     {
       title: "Rotavirus ",
       sub: "Causes diarrhea and vomiting, and can lead to dehydration.",
+      img: image1,
     },
   ];
   return (
@@ -52,280 +69,21 @@ function Table() {
           <div className="title">
             <h2>Diseases a Child Can Contract Without Vaccination</h2>
           </div>
-          {items.map((item,index) => (
+          {items.map((item, index) => (
             <div className="text" key={item.id}>
               <div className="para">
-                <h3>{index}-{item.title}:</h3>
+                <h3>
+                  {index + 1}- {item.title}
+                </h3>
                 <p>{item.sub}</p>
               </div>
-              <img src={imageF} alt="imageF" />
+              {item.img && <img src={item.img} alt={item.title} />}
             </div>
           ))}
 
-          {/* <table>
-            <thead>
-              <tr>
-                <th>Age</th>
-                <th>Dose</th>
-                <th>Taste</th>
-                <th>Disease</th>
-                <th>Dose</th>
-                <th>Vaccination method</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>The first 24 hours</td>
-                <td>Birth</td>
-                <td>Infant B liver</td>
-                <td>Viral hepatitis B</td>
-                <td>.5C</td>
-                <td>Male</td>
-              </tr>
-              <tr>
-                <td>Jane</td>
-                <td>25</td>
-                <td>Female</td>
-                <td>Male</td>
-                <td>Male</td>
-                <td>Male</td>
-              </tr>
-              <tr>
-                <td>Jane</td>
-                <td>25</td>
-                <td>Female</td>
-                <td>Male</td>
-                <td>Male</td>
-                <td>Male</td>
-              </tr>
-            </tbody>
-          </table> */}
+          
         </div>
-        {/* <div className="table">
-          <div className="text">
-            <p>Measles:</p>
-            <img src={imageS} alt="imageS" />
-          </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Age</th>
-                <th>Dose</th>
-                <th>Taste</th>
-                <th>Disease</th>
-                <th>Dose</th>
-                <th>Vaccination method</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td rowSpan={3}>The first 24 hours</td>
-                <td rowSpan={3}>Birth</td>
-                <td>Infant B liver</td>
-                <td>Viral hepatitis B</td>
-                <td>.5C</td>
-                <td>Male</td>
-              </tr>
-              <tr>
-                <td>Female</td>
-                <td>Male</td>
-                <td>Male</td>
-                <td>Male</td>
-              </tr>
-              <tr>
-                <td>Female</td>
-                <td>Male</td>
-                <td>Male</td>
-                <td>Male</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div className="table">
-          <div className="text">
-            <p>Tetanus:</p>
-            <img src={imageS} alt="imageS" />
-          </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Age</th>
-                <th>Dose</th>
-                <th>Taste</th>
-                <th>Disease</th>
-                <th>Dose</th>
-                <th>Vaccination method</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td rowSpan={3}>The first 24 hours</td>
-                <td rowSpan={3}>Birth</td>
-                <td>Infant B liver</td>
-                <td>Viral hepatitis B</td>
-                <td>.5C</td>
-                <td>Male</td>
-              </tr>
-              <tr>
-                <td>Female</td>
-                <td>Male</td>
-                <td>Male</td>
-                <td>Male</td>
-              </tr>
-              <tr>
-                <td>Female</td>
-                <td>Male</td>
-                <td>Male</td>
-                <td>Male</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div className="table">
-          <div className="text">
-            <p>Whooping Cough:</p>
-            <img src={imageS} alt="imageS" />
-          </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Age</th>
-                <th>Dose</th>
-                <th>Taste</th>
-                <th>Disease</th>
-                <th>Dose</th>
-                <th>Vaccination method</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td rowSpan={3}>The first 24 hours</td>
-                <td rowSpan={3}>Birth</td>
-                <td>Infant B liver</td>
-                <td>Viral hepatitis B</td>
-                <td>.5C</td>
-                <td>Male</td>
-              </tr>
-              <tr>
-                <td>Female</td>
-                <td>Male</td>
-                <td>Male</td>
-                <td>Male</td>
-              </tr>
-              <tr>
-                <td>Female</td>
-                <td>Male</td>
-                <td>Male</td>
-                <td>Male</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div className="table">
-          <div className="text">
-            <p>Bacterial Pneumonia:</p>
-            <img src={imageS} alt="imageS" />
-          </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Age</th>
-                <th>Dose</th>
-                <th>Taste</th>
-                <th>Disease</th>
-                <th>Dose</th>
-                <th>Vaccination method</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>The first 24 hours</td>
-                <td>Birth</td>
-                <td>Infant B liver</td>
-                <td>Viral hepatitis B</td>
-                <td>.5C</td>
-                <td>Male</td>
-              </tr>
-              <tr>
-                <td colSpan={6}></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div className="table">
-          <div className="text">
-            <p>Bacterial Meningitis:(6)</p>
-            <img src={imageS} alt="imageS" />
-          </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Age</th>
-                <th>Dose</th>
-                <th>Taste</th>
-                <th>Disease</th>
-                <th>Dose</th>
-                <th>Vaccination method</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td rowSpan={2}>The first 24 hours</td>
-                <td rowSpan={2}>Birth</td>
-                <td>Infant B liver</td>
-                <td>Viral hepatitis B</td>
-                <td>.5C</td>
-                <td>Male</td>
-              </tr>
-              <tr>
-                <td>Jane</td>
-                <td>25</td>
-                <td>Female</td>
-                <td>Male</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div className="table">
-          <div className="text">
-            <p>Hepatitis B:(7)</p>
-            <img src={imageS} alt="imageS" />
-          </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Age</th>
-                <th>Dose</th>
-                <th>Taste</th>
-                <th>Disease</th>
-                <th>Dose</th>
-                <th>Vaccination method</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td rowSpan={3}>The first 24 hours</td>
-                <td rowSpan={3}>Birth</td>
-                <td>Infant B liver</td>
-                <td>Viral hepatitis B</td>
-                <td>.5C</td>
-                <td>Male</td>
-              </tr>
-              <tr>
-                <td>Female</td>
-                <td>Male</td>
-                <td>Male</td>
-                <td>Male</td>
-              </tr>
-              <tr>
-                <td>Female</td>
-                <td>Male</td>
-                <td>Male</td>
-                <td>Male</td>
-              </tr>
-            </tbody>
-          </table>
-        </div> */}
+        
         <div className="bp">
           <Link to="/">
             <button type="button">back</button>

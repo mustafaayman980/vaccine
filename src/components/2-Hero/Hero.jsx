@@ -8,10 +8,11 @@ import "./hero.css"
         <div className="hero-text">
           <h5>We Provide All Health Care Solution</h5>
           <h2>
-            Vaccinate your child. Protect them from 10 
-            
-              <Link to="/Table"> diseases.</Link>
-           
+            Vaccinate your child. Protect them from
+            <Link to="/Table" className="diseases">
+              {" "}
+              diseases.
+            </Link>
           </h2>
           <Link to="/Intro">
             <button type="button">Read more</button>

@@ -18,16 +18,7 @@
   transition-duration: 0.3s;
   overflow: hidden;
 }
-/* .scroll2up:hover a botton {
-  width: 20px;
-  transition-duration: 0.3s;
-  transform: translateY(-200%);
-}
 
-.scroll2up a botton {
-  width: 12px;
-  transition-duration: 0.3s;
-} */
 
 .scroll2up:hover {
   background-color: var(--main-color);
@@ -37,19 +28,6 @@
   align-items: center;
 }
 
-.scroll2up::before {
-  position: absolute;
-  bottom: -20px;
-  content: " Back to Top";
-  color: white;
-  transition-duration: 0.3s;
-  font-size: 0px;
-}
 
-.scroll2up:hover::before {
-  font-size: 13px;
-  opacity: 1;
-  bottom: unset;
-  transform: translateY(-30px);
-  transition-duration: 0.3s;
-}
+
+

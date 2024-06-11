@@ -17,6 +17,7 @@ import Intro from "./assets/pages/7-Intro/Intro.jsx";
 import Hospt from "./assets/pages/8-Hospt/Hospt.jsx";
 import AuthContext from "./context/AuthContext.jsx";
 import ViewOne from "./assets/pages/9-view/ViewOne.jsx";
+import Forget from "./assets/pages/10-forget/Forget.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <AuthContext>
@@ -37,6 +38,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/Intro" element={<Intro />} />
         <Route path="/Hospt" element={<Hospt />} />
         <Route path="/ViewOne" element={<ViewOne />} />
+        <Route path="/Forget" element={<Forget />} />
 
         <Route path="/Footer" element={<Footer />} />
       </Routes>

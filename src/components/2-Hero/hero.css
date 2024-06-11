@@ -8,9 +8,11 @@
 }
 
 .hero .hero-text {
+  padding-top: 50px;
+  /* width: 800px; */
 }
 .hero .hero-text h5 {
-  color: var(--second-color);
+  color: var(--orange-color);
   font-size: 25px;
   text-transform: capitalize;
   letter-spacing: 0.5px;
@@ -18,7 +20,16 @@
 }
 .hero .hero-text h2 {
   color: var(--main-color);
-  font-size: 55px;
+    font-size: 55px;
+    text-transform: capitalize;
+    letter-spacing: .5px;
+    font-weight: 700;
+}
+
+
+.hero .hero-text h2 .diseases {
+  color: var(--orange-color) !important;
+
   text-transform: capitalize;
   letter-spacing: 0.5px;
   font-weight: 700;
@@ -36,3 +47,20 @@
 .hero .hero-image img {
   width: 100%;
 }
+/* 
+@media (max-width: 1100px) {
+  .hero .hero-image img {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero .hero-text {
+    text-align: left;
+    font-size: 15px;
+    line-height: 3.3rem;
+    margin: 24px 0;
+    /* width: auto; */
+    
+  }
+} */

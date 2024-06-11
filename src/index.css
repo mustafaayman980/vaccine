@@ -1,80 +1,75 @@
-html{
-    scroll-behavior:smooth;
-}
-body{
-    margin:0;
-    padding: 0;
-}
-:root{ 
-    --main-color: rgb(2,59,109);
-    --second-color: rgb(25,119,204);
-    --orange-color: rgb(241,119,50);
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
+* {
+  font-family: "Open Sans", sans-serif;
 }
-
-section, footer, header{
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    max-width: 100%;
-    padding:25px 0px;
-    margin-top:50px
+html {
+  scroll-behavior: smooth;
 }
-a{
-    text-decoration: none !important;
-    
+body {
+  margin: 0;
+  padding: 0;
 }
-span{
-    display:block;
+:root {
+  --main-color: rgb(2, 59, 109);
+  --second-color: rgb(25, 119, 204);
+  --orange-color: rgb(241, 119, 50);
 }
 
-ul{
-    margin: 0;
-    padding: 0;
+section,
+footer,
+header {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  max-width: 100%;
+  padding: 25px 0px;
+  margin-top: 50px;
+}
+a {
+  text-decoration: none !important;
+}
+span {
+  display: block;
 }
 
-li{
-    list-style: none;
+ul {
+  margin: 0;
+  padding: 0;
 }
 
-button{
-    cursor:pointer;
-    text-align: center;
-    box-sizing: border-box;
-    border-radius:10px;
-   
-    
-    
-
+li {
+  list-style: none;
 }
 
-button:hover{
-    transform: scale(1.03);
+button {
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 
-border{
-    border: 1px solid black;
-    
+button:hover {
+  transform: scale(1.03);
 }
 
-p{
-    line-height:28px;
+border {
+  border: 1px solid black;
 }
 
-flex{
-    display: flex;
-    
+p {
+  line-height: 28px;
 }
 
-
-input{
-     box-sizing: border-box;
-      border: 1px solid black;
-      padding: 5px 15px;
-      font-size:16px;
-      color:black;
-      border-radius:10px;
+flex {
+  display: flex;
 }
 
-
-
+input {
+  box-sizing: border-box;
+  border: 1px solid black;
+  padding: 5px 15px;
+  font-size: 16px;
+  color: black;
+  border-radius: 10px;
+}

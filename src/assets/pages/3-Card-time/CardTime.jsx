@@ -29,7 +29,7 @@ function CardTime() {
   }, [token]);
 
   const CalculateTimeDifference = ({ time2 }) => {
-    const [time1, setTime1] = useState(new Date());
+    const [time1, setTime1] = useState(new Date("2024-06-30T12:00:00"));
 
     useEffect(() => {
       const intervalId = setInterval(() => {
@@ -46,10 +46,7 @@ function CardTime() {
     const hours = Math.floor(
       (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
     );
-    // const minutes = Math.floor(
-    //   (difference % (1000 * 60 * 60)) / (1000 * 60)
-    // );
-    // const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+   
 
     return (
       <div className="totalCard">
@@ -86,8 +83,8 @@ function CardTime() {
       <Header />
       <div className="totalCard">
         <CalculateTimeDifference
-          time1={new Date()} // Example time 1
-          time2={new Date("2024-04-30T12:00:00")}
+          time1={new Date("2024-06-30T12:00:00")} // Example time 1
+          time2={new Date("2024-07-30T12:00:00")}
         />
       </div>
     </div>

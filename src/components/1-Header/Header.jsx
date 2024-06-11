@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
 import "./header.css";
-import logo from "../../assets/image/33.png";
+import logo from "../../assets/image/W33.png";
 import { useAuthContext } from "../../context/AuthContext";
+import { useState } from "react";
 
 function Header() {
   const { token } = useAuthContext();
+  const [activeLink, setActiveLink] = useState("/");
+
+  const handleLinkClick = (path) => {
+    setActiveLink(path);
+  };
+
   return (
     <div>
       <div className="header">
@@ -14,31 +21,49 @@ function Header() {
               <img src={logo} alt="logo" />
             </div>
           </Link>
+          <span></span>
           <div className="nav border">
             <ul>
               <li>
-                <Link to="/" className="active" href="#home">
+                <Link
+                  to="/"
+                  className={activeLink === "/" ? "active" : null}
+                  onClick={() => handleLinkClick("/")}
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/Table" href="#Vaccination schedule">
+                <Link
+                  to="/Table"
+                  className={activeLink === "/Table" ? "active" : null}
+                  onClick={() => handleLinkClick("/Table")}
+                >
                   Diseases
                 </Link>
               </li>
               <li>
-                <Link to="/CardTime">Vaccination time</Link>
+                <Link
+                  to="/CardTime"
+                  className={activeLink === "/CardTime" ? "active" : null}
+                  onClick={() => handleLinkClick("/CardTime")}
+                >
+                  Vaccination time
+                </Link>
               </li>
               <li>
-                <Link to="/profile">Profile</Link>
+                <Link
+                  to="/profile"
+                  className={activeLink === "/profile" ? "active" :null}
+                  onClick={() => handleLinkClick("/profile")}
+                >
+                  Profile
+                </Link>
               </li>
             </ul>
           </div>
           <span></span>
 
-          <div className="search">
-            <input type="search" placeholder="search" />
-          </div>
           {token ? (
             <Profile />
           ) : (
@@ -57,13 +82,15 @@ function Header() {
 }
 export default Header;
 const Profile = () => {
-  const { profile } = useAuthContext();
+  const { signOut } = useAuthContext();
 
   return (
-    <Link to={"/profile"}>
+    <Link to="/profile">
       <div>
-        <Link to="">
-        <button type="button">sing out</button>
+        <Link to="/Login">
+          <button type="button" onClick={signOut}>
+            sing out
+          </button>
         </Link>
       </div>
     </Link>
