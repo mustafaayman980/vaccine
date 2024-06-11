@@ -2,7 +2,7 @@
   /* background-color: #e8e8e8; */
   margin-top: 70px;
 }
-.tables .title {
+.tables .title h2 {
   text-align: center;
   color: var(--main-color);
   font-size: 35px;
@@ -19,8 +19,8 @@
   align-items: center;
   gap: 20px;
 }
-.table .text .para{
-  width:500px
+.table .text .para {
+  width: 500px;
 }
 
 .table .text h3 {
@@ -95,4 +95,28 @@ table span {
   position: relative;
   left: 50%;
   transform: translate(-50%, 30%);
+}
+
+@media (max-width: 1100px) {
+  .text img {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .tables .title h2 {
+    font-size: 25px;
+    text-transform: capitalize;
+    
+    margin-top: 100px;
+  }
+  .table .text {
+    text-align: center;
+  }
+  .table .text h3{
+    font-size: 40px;
+  }
+  .table .text p{
+    font-size: 20px;
+  }
 }

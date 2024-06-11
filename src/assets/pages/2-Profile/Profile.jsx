@@ -18,7 +18,7 @@ function Profile() {
     const getChildren = async () => {
       try {
         fetch("http://localhost:8000/api/childrens", {
-          method: "POST",
+          method: "get",
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,

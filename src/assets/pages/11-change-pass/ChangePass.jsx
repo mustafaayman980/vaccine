@@ -1,18 +1,19 @@
 import { Link } from "react-router-dom";
 import Header from "../../../components/1-Header/Header";
 
- function Forget() {
+
+ function ChangePass() {
   return (
     <div>
       <Header />
 
       <div className="login">
-        <h1>forgot pass</h1>
+        <h1>Change password</h1>
         <div className="wave">
           <div className="container">
-            <div className="heading">Sign In</div>
+            {/* <div className="heading">Sign In</div> */}
 
-            <form className="form">
+            <form className="form" action="" method="post">
               <input
                 placeholder="old password"
                 id="national_id"
@@ -32,17 +33,20 @@ import Header from "../../../components/1-Header/Header";
               <input
                 placeholder="Confirm Password"
                 id="password"
-                name="password"
+                name="password_confirmation"
                 type="password"
                 className="input"
                 required={true}
               />
-              
-              <input value="Sign In" type="submit" className="login-button" />
-              
+
+              <input
+                value="change password"
+                type="submit"
+                className="login-button"
+              />
             </form>
           </div>
-          <div className="bt">
+          <div className="bt" style={{ margin: "80px" }}>
             <Link to="/Login">
               <button type="button">back</button>
             </Link>
@@ -52,4 +56,4 @@ import Header from "../../../components/1-Header/Header";
     </div>
   );
 }
-export default Forget;
+export default ChangePass;

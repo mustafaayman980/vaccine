@@ -49,7 +49,6 @@
 
 .work .cards .card:hover {
   background-color: rgb(2 59 109 / 87%);
-  
 }
 
 .work .cards .card .card-num span {
@@ -76,11 +75,30 @@
   margin-top: -20px;
 }
 
-
 .work .cards .card button {
   background: var(--orange-color);
   padding: 20px 45px;
   color: white;
   border: none;
   font-size: 18px;
+}
+
+@media (max-width: 1100px) {
+}
+
+@media (max-width: 550px) {
+  .work .text h2 {
+    font-size: 2rem;
+    line-height: 3.3rem;
+    margin: 24px 0;
+  }
+  .work .cards .card {
+    margin: 25px;
+  }
+  .work .cards .card .card-num span {
+    font-size: 80px;
+  }
+   .work .cards .card .card-text h3 {
+    font-size: 40px;
+  }
 }

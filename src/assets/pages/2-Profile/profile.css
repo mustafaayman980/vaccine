@@ -149,3 +149,45 @@
     border: none;
     font-size: 18px;
 }
+
+@media (max-width: 1200px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    margin-top:200px;
+  }
+  
+}
+@media (max-width: 700px) {
+   .cards img {
+    display:none;
+  }
+  
+ .profile .card-1  {
+    display:flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .profile .card-1 h4{
+    text-align: center;
+  }
+  .profile .kids-info{
+    gap: 0;
+  }
+  .profile .kids-info .labels{
+    flex-direction: column;
+  }
+  .profile .kids-info .info  h4{
+    margin:0;
+  }
+  
+}
+
+@media (max-width: 550px) {
+   .cards {
+    display: flex;
+    flex-direction: column;
+    margin-top:200px;
+  }
+  
+}

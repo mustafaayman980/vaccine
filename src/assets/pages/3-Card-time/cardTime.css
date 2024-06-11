@@ -100,3 +100,43 @@
   .card-time p span{
     color: var(--second-color);
   }
+
+
+  @media (max-width: 1100px) {
+  
+}
+
+@media (max-width: 600px) {
+   .card-time {
+    margin-top:400px;
+      width: 400px;
+    }
+   .card-time img {
+      width: 100px;
+      height: 100px;
+    }
+   .card-time .text h3 {
+      font-size: 20px;
+    }
+   .card-time .text .text-pra {
+      font-size: 15px;
+    }
+   .card-time .card-info {
+      font-size: 15px;
+    }
+   .card-time p{
+      font-size: 15px;
+    }
+   .totalCard {
+      margin-top: 15rem;
+    }
+   .totalCard .card-time {
+      width: 300px;
+    }
+   .totalCard .card-time img {
+      width: 100px;
+      height: 100px;
+    }
+   
+  
+}

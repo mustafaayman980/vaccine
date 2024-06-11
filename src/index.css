@@ -43,10 +43,12 @@ li {
 }
 
 button {
+  
   cursor: pointer;
   text-align: center;
   box-sizing: border-box;
   border-radius: 10px;
+  
 }
 
 button:hover {

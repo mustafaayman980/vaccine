@@ -12,7 +12,7 @@ function ViewOne() {
     const getChildren = async () => {
       try {
         fetch("http://localhost:8000/api/childrens", {
-          method: "POST",
+          method: "get",
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
@@ -67,13 +67,17 @@ function ViewOne() {
                         {children.doses.map((dose) => (
                           <>
                             <div className="card-vac">
-                              <p className="vac">
-                                <span>doses:</span> {dose.vaccine_name}
-                              </p>
-                              <p>
-                                <span>doses_date:</span>
-                                {dose.doses_date}
-                              </p>
+                              <ul>
+                                <li>
+                                  <p className="vac">
+                                    <span>doses:</span> {dose.vaccine_name}
+                                  </p>
+                                  <p>
+                                    <span>doses_date:</span>
+                                    {dose.doses_date}
+                                  </p>
+                                </li>
+                              </ul>
                             </div>
                           </>
                         ))}
