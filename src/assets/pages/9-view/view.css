@@ -30,7 +30,7 @@
   border-radius: 10px;
 }
 .profile .card-vac ul li:first-child {
-  background-color: var(--orange-color);
+  /* background-color: var(--orange-color); */
 }
 .profile .card-vac p {
   display: flex;
@@ -81,4 +81,4 @@
    
   }
 }
-}
+

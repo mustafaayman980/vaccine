@@ -100,6 +100,10 @@
   border: none;
   padding-bottom: 0;
 }
+
+.header .fixed ul.model li.mode button:hover {
+  color: red;
+}
 .header .fixed ul.model li a {
   font-size: 1rem;
   scale: 1;
@@ -110,16 +114,58 @@
   font-size: 1.2rem;
 }
 
-.header button.menu,
-.header .mode button {
-  /* border-radius: 50%;
-    width:2.4rem;
-    height:2.4rem; */
+.header .total-setting .btn {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.header .icon-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header .icon-settings {
+  font-size: 25px;
+  cursor: pointer;
+  color: var(--second-color);
 }
 
-/* .Profile .out a {
-  
-} */
+.header .setting .setting-info ul {
+  width: 220px;
+  height: 80px;
+  position: absolute;
+  top: 90%;
+  right: 60px;
+  background-color: white;
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  flex-direction: column;
+}
+.header .setting .setting-info ul li a {
+  color: var(--second-color);
+  font-size: 25px;
+  padding-right: 50px;
+}
+.header .setting .setting-info ul li a:hover {
+  color: var(--orange-color);
+  font-size: 25px;
+  padding-right: 50px;
+}
+
+.header .setting .setting-info ul li .icon-close1 {
+  position: relative;
+  left: 80px;
+  padding-bottom: 10px;
+}
+.header .setting .setting-info ul li .icon-close1:hover {
+  color: red;
+  /* transform: rotate(360deg); */
+  transform: scale(1.1);
+}
 
 @media (max-width: 700px) {
   .header-container {

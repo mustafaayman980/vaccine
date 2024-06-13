@@ -5,11 +5,9 @@ const CreateAuthContext =  createContext()
 
 // eslint-disable-next-line react/prop-types
 export default function AuthContext({children}) {
-let parent =  sessionStorage.getItem("parent");
-
-parent = JSON.parse(parent)
+const parent = sessionStorage.getItem("parent");
 const sessionToken = sessionStorage.getItem("token");
-    const [profile, setProfile] = useState(parent ?parent: null); 
+    const [profile, setProfile] = useState(parent ? JSON.parse(parent):null); 
     const [token, setToken] = useState(sessionToken ? sessionToken : null);
   return (
     <CreateAuthContext.Provider
@@ -21,4 +19,4 @@ const sessionToken = sessionStorage.getItem("token");
 }
 
 
-export const useAuthContext = ()=> useContext(CreateAuthContext)
+export const useAuthContext = () => useContext(CreateAuthContext);

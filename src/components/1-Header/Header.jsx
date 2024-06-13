@@ -1,20 +1,23 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./header.css";
 import logo from "../../assets/image/final-logo.png";
 import { useAuthContext } from "../../context/AuthContext";
 import { useState } from "react";
+import axios from "axios";
+
 
 function Header() {
   const { token } = useAuthContext();
   const [showModel, setShowModel] = useState(false);
-  const [showSetting, setSetting] = useState(false);
 
   const [activeLink, setActiveLink] = useState("/");
 
   const handleLinkClick = (path) => {
     setActiveLink(path);
   };
-
+  const handleLogOut = () => {
+    window.location.pathname = "/login";
+  };
   return (
     <div>
       <div className="header">
@@ -31,66 +34,73 @@ function Header() {
             </div>
           </Link>
           <span></span>
-          <div className="nav">
-            <ul>
-              <li>
-                <Link
-                  to="/"
-                  className={activeLink === "/" ? "active" : null}
-                  onClick={() => handleLinkClick("/")}
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/Table"
-                  className={activeLink === "/Table" ? "active" : null}
-                  onClick={() => handleLinkClick("/Table")}
-                >
-                  Diseases
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/CardTime"
-                  className={activeLink === "/CardTime" ? "active" : null}
-                  onClick={() => handleLinkClick("/CardTime")}
-                >
-                  Vaccination time
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/profile"
-                  className={activeLink === "/profile" ? "active" : null}
-                  onClick={() => handleLinkClick("/profile")}
-                >
-                  Profile
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <span></span>
+          {token && (
+            <div className="nav">
+              <ul>
+                <li>
+                  <NavLink
+                    to="/"
+                    className={({ isActive, isPending }) =>
+                      isPending ? "pending" : isActive ? "active" : ""
+                    }
+                  >
+                    Home
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/Table"
+                    className={({ isActive, isPending }) =>
+                      isPending ? "pending" : isActive ? "active" : ""
+                    }
+                  >
+                    Diseases
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/CardTime"
+                    className={({ isActive, isPending }) =>
+                      isPending ? "pending" : isActive ? "active" : ""
+                    }
+                  >
+                    Vaccination time
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/profile"
+                    className={({ isActive, isPending }) =>
+                      isPending ? "pending" : isActive ? "active" : ""
+                    }
+                  >
+                    Profile
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+          )}
 
-          {token ? (
-            <Profile />
+          <span></span>
+          <Profile />
+          {/* {token ? (
+            
           ) : (
             <div className="btn">
-              <Link to="/login">
+              <NavLink to="/login">
                 <button type="button" className="btn">
                   login
                 </button>
-              </Link>
+              </NavLink>
             </div>
-          )}
+          )} */}
 
           {showModel && (
             <div className="fixed">
               <ul className="model">
                 <li className="mode">
                   <button
-                    className="icon-close"
+                    className="icon-close1"
                     onClick={() => {
                       setShowModel(false);
                     }}
@@ -111,8 +121,6 @@ function Header() {
               </ul>
             </div>
           )}
-
-          
         </div>
       </div>
     </div>
@@ -120,7 +128,24 @@ function Header() {
 }
 export default Header;
 const Profile = () => {
-  const { signOut } = useAuthContext();
+  const [Setting, setSetting] = useState(false);
+ 
+  const { token, setToken } = useAuthContext();
+const navigate = useNavigate()
+  async function handleLogOut() {
+    await axios.post("http://localhost:8000/api/logout", null, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    setToken(null);
+  
+    sessionStorage.removeItem("token");
+   navigate('/login',{replace:
+    true
+   })
+
+  }
 
   return (
     <div
@@ -132,26 +157,51 @@ const Profile = () => {
         gap: "1rem",
       }}
     >
-      <Link to="/profile">
+      {token ? (
         <div>
-          <Link to="/">
-            <button type="button" onClick={signOut}>
-              sing out
-            </button>
-          </Link>
+          <div className="total-setting">
+            <div className="btn">
+              <button type="button" className="btn-1" onClick={handleLogOut}>
+                logout
+              </button>
+              <div className="icon-info">
+                <div
+                  onClick={() => {
+                    setSetting(!Setting);
+                  }}
+                  className="icon-settings"
+                >
+                  {Setting && (
+                    <div className="setting">
+                      <div className="setting-info">
+                        <ul>
+                          <li>
+                            <div
+                              className="icon-close1"
+                              onClick={() => {
+                                setSetting(false);
+                              }}
+                            ></div>
+                          </li>
+                          <li>
+                            <Link to="/ChangePass">ChangePass?</Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </Link>
-      <div
-        // onClick={() => {
-        //   // setSetting(true);
-        // }}
-        className="icon-settings"
-        style={{
-          fontSize: "25px",
-          color: "rgb(25, 119, 204)",
-          cursor: "pointer",
-        }}
-      ></div>
+      ) : (
+        <Link to="/login">
+          <button type="button" className="btn">
+            login
+          </button>
+        </Link>
+      )}
     </div>
   );
 };

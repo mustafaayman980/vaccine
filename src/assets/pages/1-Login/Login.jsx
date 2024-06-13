@@ -29,7 +29,9 @@ function Login() {
       setToken(responseData.token);
       onProfile(responseData.parent);
       // Redirect to the appropriate page after successful login
-      navigate("/profile");
+      navigate("/profile",{replace:
+        true
+      });
       console.log(responseData);
     } catch (error) {
       console.error("Login failed:", error);
@@ -42,8 +44,7 @@ function Login() {
     const password = e.target.password.value;
     if (!national_id && !password) return null;
     handleLogin(national_id, password);
-    console.log(national_id, password);
-  };
+     navigate("/profile", { replace: true });  };
 
   return (
     <div>
@@ -72,10 +73,7 @@ function Login() {
                 className="input"
                 required={true}
               />
-              <span className="forgot-password">
-                
-                <Link to="/ChangePass">ChangePass ?</Link>
-              </span>
+              
               <input value="Sign In" type="submit" className="login-button" />
             </form>
           </div>
