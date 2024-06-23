@@ -6,7 +6,7 @@ import "./hero.css"
     <div>
       <div className="hero ">
         <div className="hero-text">
-          <h5>We Provide All Health Care Solution</h5>
+          {/* <h5>We Provide All Health Care Solution</h5> */}
           <h2>
             Vaccinate your child. Protect them from
             <Link to="/Table" className="diseases">

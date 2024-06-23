@@ -10,14 +10,6 @@ function Header() {
   const { token } = useAuthContext();
   const [showModel, setShowModel] = useState(false);
 
-  const [activeLink, setActiveLink] = useState("/");
-
-  const handleLinkClick = (path) => {
-    setActiveLink(path);
-  };
-  const handleLogOut = () => {
-    window.location.pathname = "/login";
-  };
   return (
     <div>
       <div className="header">
@@ -83,17 +75,7 @@ function Header() {
 
           <span></span>
           <Profile />
-          {/* {token ? (
-            
-          ) : (
-            <div className="btn">
-              <NavLink to="/login">
-                <button type="button" className="btn">
-                  login
-                </button>
-              </NavLink>
-            </div>
-          )} */}
+          
 
           {showModel && (
             <div className="fixed">

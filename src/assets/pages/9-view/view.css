@@ -26,12 +26,10 @@
   flex-direction: row;
   justify-content: space-evenly;
   padding: 0.5rem;
-  border: 1px solid var(--second-color);
+  
   border-radius: 10px;
 }
-.profile .card-vac ul li:first-child {
-  /* background-color: var(--orange-color); */
-}
+
 .profile .card-vac p {
   display: flex;
   flex-direction: row;

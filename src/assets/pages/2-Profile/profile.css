@@ -30,9 +30,8 @@
 .cards {
   position: relative;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
- 
   z-index: 10;
   margin-top: 9rem;
 }
@@ -42,27 +41,25 @@
 }
 
 .profile .card-1 {
-  display: flex; 
- flex-direction: row; 
- gap: 4rem;
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
   margin: 4rem;
 }
 
 .profile .card-1 h4 {
-   color:var(--orange-color);
+  color: var(--orange-color);
   font-size: 40px;
   text-transform: capitalize;
   letter-spacing: 0.5px;
   font-weight: 700;
 }
 
-
 .profile .card-1 form {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-
 
 .profile .card-1 .labels span {
   color: var(--main-color);
@@ -79,8 +76,6 @@
   text-transform: capitalize;
   letter-spacing: 0.5px;
   font-weight: 700;
-  
-  
 }
 
 .profile .card-1 .labels label {
@@ -90,104 +85,91 @@
   border-bottom-style: outset;
   border-radius: 10px;
   padding: 5px;
-  
 }
 
-
-
-
-.for-kids h2{
+.for-kids h2 {
   text-align: center;
   font-size: 25px;
   text-transform: capitalize;
   letter-spacing: 0.5px;
   font-weight: 700;
-  
 }
 
-.profile .kids-info{
+.profile .kids-info {
   display: flex;
   flex-direction: column;
-  /* gap: 2rem; */
+
   justify-content: center;
   align-items: center;
 }
 
-{
-
+ {
 }
 
-
-.profile .kids-info .info  h4 {
-  color:var(--orange-color);
+.profile .kids-info .info h4 {
+  color: var(--orange-color);
   font-size: 40px;
   text-transform: capitalize;
   letter-spacing: 0.5px;
   font-weight: 700;
 }
 
-
-.profile .kids-info .labels{
-  display:flex;
+.profile .kids-info .labels {
+  display: flex;
   gap: 0.5em;
   flex-direction: row;
-  
 }
 
-.profile .kids-info .labels form{
- border: 1px solid var(--main-color) ;
+.profile .kids-info .labels form {
+  border: 1px solid var(--main-color);
   padding: 40px 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-
-.profile .kids-info .labels form button{
+.profile .kids-info .labels form button {
   background: var(--orange-color);
-    padding: 10px 25px;
-    color: white;
-    border: none;
-    font-size: 18px;
+  padding: 10px 25px;
+  color: white;
+  border: none;
+  font-size: 18px;
 }
 
 @media (max-width: 1200px) {
   .cards {
     display: flex;
     flex-direction: column;
-    margin-top:200px;
+    margin-top: 200px;
   }
-  
 }
 @media (max-width: 700px) {
-   .cards img {
-    display:none;
+  .cards img {
+    display: none;
   }
-  
- .profile .card-1  {
-    display:flex;
+
+  .profile .card-1 {
+    display: flex;
     flex-direction: column;
     gap: 0;
   }
-  .profile .card-1 h4{
+  .profile .card-1 h4 {
     text-align: center;
   }
-  .profile .kids-info{
+  .profile .kids-info {
     gap: 0;
   }
-  .profile .kids-info .labels{
+  .profile .kids-info .labels {
     flex-direction: column;
   }
-  .profile .kids-info .info  h4{
-    margin:0;
+  .profile .kids-info .info h4 {
+    margin: 0;
   }
-  
 }
 
 @media (max-width: 550px) {
-   .cards {
+  .cards {
     display: flex;
     flex-direction: column;
-    margin-top:200px;
+    margin-top: 200px;
   }
-  
 }

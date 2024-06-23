@@ -1,5 +1,5 @@
 .tables {
-  /* background-color: #e8e8e8; */
+ 
   margin-top: 70px;
 }
 .tables .title h2 {
@@ -9,7 +9,8 @@
   text-transform: capitalize;
   letter-spacing: 0.5px;
   font-weight: 700;
-  padding: 0.5rem;
+  padding-top:60px;
+
 }
 
 .table .text {

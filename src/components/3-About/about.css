@@ -10,16 +10,12 @@
   display: flex;
   gap: 2rem;
 }
-.about .image .image-t {
-}
 
 .about .image .image-t img {
   border-radius: 0 60px 60px;
   padding: 5px;
 }
 
-.about .text {
-}
 .about .text h3 {
   color: var(--orange-color);
   font-size: 40px;

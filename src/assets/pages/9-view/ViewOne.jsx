@@ -14,24 +14,23 @@ const generateColorFromDate = (date) => {
     hash = dateStr.charCodeAt(i) + ((hash << 5) - hash);
   }
 
-  // Convert the hash to a hexadecimal color code
-  let color = "#";
-  for (let i = 0; i < 3; i++) {
-    let value = (hash >> (i * 8)) & 0xff;
-    color += ("00" + value.toString(16)).substr(-2);
-  }
+  const baseValue = 200; // Base value for light colors (ensures the colors are light)
+    let r = (hash & 0xFF) % 56 + baseValue; // % 56 to ensure the variation is not too dark
+    let g = (hash >> 8 & 0xFF) % 56 + baseValue;
+    let b = (hash >> 16 & 0xFF) % 56 + baseValue;
 
-  return color;
+    // Convert RGB to hexadecimal color code
+    let color = `#${('0' + r.toString(16)).slice(-2)}${('0' + g.toString(16)).slice(-2)}${('0' + b.toString(16)).slice(-2)}`;
+
+    return color;
 };
 
-
 function ViewOne() {
-
-   function isDatePast(dateString) {
-     const today = new Date();
-     const doseDate = new Date(dateString); // Assuming dateString is in a format parseable by Date constructor
-     return doseDate < today;
-   }
+  function isDatePast(dateString) {
+    const today = new Date();
+    const doseDate = new Date(dateString); // Assuming dateString is in a format parseable by Date constructor
+    return doseDate < today;
+  }
   const { token } = useAuthContext();
   console.log(token);
   const [data, setData] = useState([]);
@@ -96,13 +95,17 @@ function ViewOne() {
                         {children.doses.map((dose, index) => (
                           <div
                             key={index}
-                            style={{ backgroundColor: generateColorFromDate (new Date(dose.doses_date)),padding:"10px 20px",borderRadius: "5px" }}
-
+                            style={{
+                              backgroundColor: generateColorFromDate(
+                                new Date(dose.doses_date)
+                              ),
+                              padding: "10px 20px",
+                              borderRadius: "5px",
+                            }}
+                            className="card-vac"
                           >
                             <ul>
-                              <li
-                                className={dose.doses_date ? "bg-defect" : ""}
-                              >
+                              <li>
                                 <p className="vac">
                                   <span>doses:</span> {dose.vaccine_name}
                                 </p>

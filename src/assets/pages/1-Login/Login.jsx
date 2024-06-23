@@ -3,7 +3,6 @@ import Header from "../../../components/1-Header/Header";
 import "./login.css";
 
 import { useAuthContext } from "../../../context/AuthContext";
-// import fetch from 'node-fetch'
 
 function Login() {
   const navigate = useNavigate();
@@ -28,14 +27,11 @@ function Login() {
       sessionStorage.setItem("parent", JSON.stringify(responseData.parent));
       setToken(responseData.token);
       onProfile(responseData.parent);
-      // Redirect to the appropriate page after successful login
-      navigate("/profile",{replace:
-        true
-      });
+
+      navigate("/profile", { replace: true });
       console.log(responseData);
     } catch (error) {
       console.error("Login failed:", error);
-      // Handle login failure, e.g., show error message to the user
     }
   }
   const handleSubmit = (e) => {
@@ -44,7 +40,8 @@ function Login() {
     const password = e.target.password.value;
     if (!national_id && !password) return null;
     handleLogin(national_id, password);
-     navigate("/profile", { replace: true });  };
+    navigate("/profile", { replace: true });
+  };
 
   return (
     <div>
@@ -61,7 +58,6 @@ function Login() {
                 placeholder="national_id"
                 id="national_id"
                 name="national_id"
-                // type="email"
                 className="input"
                 required={true}
               />
@@ -73,7 +69,7 @@ function Login() {
                 className="input"
                 required={true}
               />
-              
+
               <input value="Sign In" type="submit" className="login-button" />
             </form>
           </div>
