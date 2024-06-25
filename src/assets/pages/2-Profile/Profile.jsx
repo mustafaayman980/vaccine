@@ -58,7 +58,7 @@ function Profile() {
                     <span>phone_number:</span> {profile?.phone_number}
                   </label>
                   <label>
-                    <span>address:</span> {profile?.national_id}
+                    <span>address:</span> {profile?.address}
                   </label>
                 </form>
               </div>
